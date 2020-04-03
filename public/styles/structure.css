@@ -1,0 +1,38 @@
+body {
+  background: #FFFCC0;
+  background-size: 100%;
+}
+
+nav ul li {
+  color: black;
+  font-family: 'Impact', impact, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  display: inline;
+}
+
+#content ul li {
+  color: black;
+  font-family: 'Impact', impact, sans-serif;
+  text-decoration: none;
+  list-style-type: none;
+  display: inline;
+}
+
+/* .navigation li {
+  align-items: flex-end;
+} */
+
+a {
+  color: black;
+  font-family: 'Impact', impact, sans-serif;
+  text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
