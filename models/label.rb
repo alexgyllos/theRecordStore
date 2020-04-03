@@ -30,8 +30,8 @@ class Label
   def artists()
     sql = "SELECT artists.* FROM artists
            INNER JOIN labels
-           ON artists.label = labels.id
-           WHERE id = $1"
+           ON artists.label_id = labels.id
+           WHERE labels.id = $1"
     values = [@id]
     results = SqlRunner.run(sql, values)
     return results.map {|artist| Artist.new(artist)}

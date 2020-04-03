@@ -1,5 +1,6 @@
 <ul>
   <% @records.each do |record| %>
-  <li><%= record.name %></li>
+  <li><a href="/records/<%= record.id %>"><%= record.name %></a></li><br>
+  <li><a href="/artists/<%= record.artist_id%>"><%= record.artists().name %></a></li><br>
   <% end %>
 </ul>

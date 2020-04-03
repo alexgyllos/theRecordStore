@@ -15,6 +15,10 @@ capitol_records = Label.new({'name' => 'Capitol Records',
                              'contact' => 'capitolrecords@email.com'})
 capitol_records.save()
 
+prestige_records = Label.new({'name' => 'Prestige Records',
+                              'contact' => 'prestigerecords@email.com'})
+prestige_records.save()
+
 mac_demarco = Artist.new({'name' => 'Mac DeMarco',
                           'label_id' => captured_tracks.id})
 mac_demarco.save()
@@ -22,6 +26,10 @@ mac_demarco.save()
 the_beach_boys = Artist.new({'name' => 'The Beach Boys',
                              'label_id' => capitol_records.id})
 the_beach_boys.save()
+
+miles_davis = Artist.new({'name' => 'Miles Davis',
+                          'label_id' => prestige_records.id})
+miles_davis.save()
 
 this_old_dog = Record.new({'name' => 'This Old Dog',
                            'artist_id' => mac_demarco.id,
@@ -47,6 +55,13 @@ pet_sounds = Record.new({'name' => 'Pet Sounds',
                          'selling_price' => 15})
 pet_sounds.save()
 
+relaxin_with_the_miles_davis_quintet = Record.new({'name' => "Relaxin' with the Miles Davis Quintet",
+                                                   'artist_id' => miles_davis.id,
+                                                   'genre' => 'Jazz',
+                                                   'stock' => 5,
+                                                   'buying_cost' => 4,
+                                                   'selling_price' => 14})
+relaxin_with_the_miles_davis_quintet.save()                                                   
 
 binding.pry
 nil

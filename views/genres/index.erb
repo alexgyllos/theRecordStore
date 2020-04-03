@@ -1,0 +1,19 @@
+<h1>Rock</h1>
+
+<ul>
+  <% @records.each do |record| %>
+  <% if record.genre == 'Rock' %>
+  <li><a href="/records/<%= record.id %>"><%= record.name %></a></li>
+  <% end %>
+  <% end %>
+</ul>
+
+<h1>Jazz</h1>
+
+<ul>
+  <% @records.each do |record| %>
+  <% if record.genre == 'Jazz' %>
+  <li><a href="/records/<%= record.id %>"><%= record.name %></a></li>
+  <% end %>
+  <% end %>
+</ul>

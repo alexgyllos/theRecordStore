@@ -10,7 +10,7 @@ class Record
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @artist_id = options['artist_id']
-    @genre = options['genre']
+    @genre = options['genre'].to_s
     @stock = options['stock']
     @buying_cost = options['buying_cost']
     @selling_price = options['selling_price']
@@ -39,6 +39,11 @@ class Record
     values = [@artist_id]
     results = SqlRunner.run(sql, values)
     return results.map {|artist| Artist.new(artist)}.first()
+  end
+
+  def markup()
+    markup = @selling_price - @buying_cost
+    return markup
   end
 
   def Record.find(id)

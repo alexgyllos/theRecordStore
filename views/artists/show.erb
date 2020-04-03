@@ -1,0 +1,7 @@
+<h1><%= @artist.name %></h1>
+
+<ul>
+  <% @artist.records().each do |record| %>
+  <li><a href="/records/<%= record.id %>"><%= record.name %></a></li>
+  <% end %>
+</ul>

@@ -1,0 +1,5 @@
+<ul>
+  <% @labels.each do |label| %>
+  <li><a href="/labels/<%= label.id %>"><%= label.name %></a></li>
+  <% end %>
+</ul>
