@@ -31,7 +31,7 @@ miles_davis = Artist.new({'name' => 'Miles Davis',
                           'label_id' => prestige_records.id})
 miles_davis.save()
 
-this_old_dog = Record.new({'name' => 'This Old Dog',
+this_old_dog = Record.new({'record_name' => 'This Old Dog',
                            'artist_id' => mac_demarco.id,
                            'genre' => 'Rock',
                            'stock' => 15,
@@ -39,7 +39,7 @@ this_old_dog = Record.new({'name' => 'This Old Dog',
                            'selling_price' => 15})
 this_old_dog.save()
 
-here_comes_the_cowboy = Record.new({'name' => 'Here Comes The Cowboy',
+here_comes_the_cowboy = Record.new({'record_name' => 'Here Comes The Cowboy',
                            'artist_id' => mac_demarco.id,
                            'genre' => 'Rock',
                            'stock' => 20,
@@ -47,7 +47,7 @@ here_comes_the_cowboy = Record.new({'name' => 'Here Comes The Cowboy',
                            'selling_price' => 15})
 here_comes_the_cowboy.save()
 
-pet_sounds = Record.new({'name' => 'Pet Sounds',
+pet_sounds = Record.new({'record_name' => 'Pet Sounds',
                          'artist_id' => the_beach_boys.id,
                          'genre' => 'Rock',
                          'stock' => 10,
@@ -55,13 +55,13 @@ pet_sounds = Record.new({'name' => 'Pet Sounds',
                          'selling_price' => 15})
 pet_sounds.save()
 
-relaxin_with_the_miles_davis_quintet = Record.new({'name' => "Relaxin' with the Miles Davis Quintet",
+relaxin_with_the_miles_davis_quintet = Record.new({'record_name' => "Relaxin' with the Miles Davis Quintet",
                                                    'artist_id' => miles_davis.id,
                                                    'genre' => 'Jazz',
                                                    'stock' => 5,
                                                    'buying_cost' => 4,
-                                                   'selling_price' => 14})
-relaxin_with_the_miles_davis_quintet.save()                                                   
+                                                   'selling_price' => 13})
+relaxin_with_the_miles_davis_quintet.save()
 
 binding.pry
 nil

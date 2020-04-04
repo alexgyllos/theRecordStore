@@ -16,7 +16,7 @@ CREATE TABLE artists (
 
 CREATE TABLE records (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(255),
+  record_name VARCHAR(255),
   artist_id INT REFERENCES artists(id) ON DELETE CASCADE,
   genre VARCHAR (255),
   stock INT,

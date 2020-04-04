@@ -27,6 +27,12 @@ class Label
     SqlRunner.run(sql, values)
   end
 
+  def delete()
+    sql = "DELETE FROM labels WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def artists()
     sql = "SELECT artists.* FROM artists
            INNER JOIN labels

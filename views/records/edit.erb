@@ -1,0 +1,22 @@
+<form class="" action="/records/<%= @record.id %>" method="post">
+
+  <label for="student">Record Name</label>
+    <input type="text" name="record_name" value="<%= @record.record_name %>"/>
+
+  <label for="record">Artist</label>
+    <input type="text" name="artist_id" value="<%= @record.artist_id %>"/>
+
+  <label for="record">Genre</label>
+    <input type="text" name="genre" value="<%= @record.genre %>"/>
+
+  <label for="record">Stock</label>
+    <input type="text" name="stock" value="<%= @record.stock%>"/>
+
+  <label for="record">Buying Cost</label>
+    <input type="text" name="buying_cost" value="<%= @record.buying_cost%>"/>
+
+  <label for="record">Selling Price</label>
+    <input type="text" name="selling_price" value="<%= @record.selling_price%>"/>
+
+  <input type="submit" value="Edit">
+</form>

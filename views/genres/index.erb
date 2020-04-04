@@ -3,7 +3,7 @@
 <ul>
   <% @records.each do |record| %>
   <% if record.genre == 'Rock' %>
-  <li><a href="/records/<%= record.id %>"><%= record.name %></a></li>
+  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li>
   <% end %>
   <% end %>
 </ul>
@@ -13,7 +13,7 @@
 <ul>
   <% @records.each do |record| %>
   <% if record.genre == 'Jazz' %>
-  <li><a href="/records/<%= record.id %>"><%= record.name %></a></li>
+  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li>
   <% end %>
   <% end %>
 </ul>

@@ -1,7 +1,14 @@
-<h1><%= @records.name %></h1>
+<h1><%= @records.record_name %></h1>
 <h2><%= @records.artists().name %></h2>
 
 <p> Genre: <%= @records.genre %></p>
 <p> Stock: <%= @records.stock %></p>
 <p> Buying Cost: <%= @records.buying_cost %></p>
 <p> Selling Price: <%= @records.selling_price %></p>
+<p> Markup: <%= @records.calculate_markup() %> </p>
+
+<a href="/records/<%= @records.id %>/edit">Edit Record</a>
+<br>
+<form action="/records/<%= @records.id %>/delete" method="post">
+  <button type="submit" name="button">Delete Record</button>
+</form>
