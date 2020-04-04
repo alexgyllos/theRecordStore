@@ -23,6 +23,10 @@ reprise_records = Label.new({'name' => 'Reprise Records',
                              'contact' => 'repriserecords@email.com'})
 reprise_records.save()
 
+polydor_records = Label.new({'name' => 'Polydor Reocords',
+                             'contact' => 'polydorrecords@email.com'})
+polydor_records.save()
+
 mac_demarco = Artist.new({'name' => 'Mac DeMarco',
                           'label_id' => captured_tracks.id})
 mac_demarco.save()
@@ -38,6 +42,10 @@ miles_davis.save()
 neil_young = Artist.new({'name' => 'Neil Young',
                          'label_id' => reprise_records.id})
 neil_young.save()
+
+lana_del_rey = Artist.new({'name' => 'Lana Del Rey',
+                           'label_id' => polydor_records.id})
+lana_del_rey.save()
 
 this_old_dog = Record.new({'record_name' => 'This Old Dog',
                            'artist_id' => mac_demarco.id,
@@ -78,6 +86,14 @@ harvest = Record.new({'record_name' => 'Harvest',
                       'buying_cost' => 10,
                       'selling_price' => 20})
 harvest.save()
+
+born_to_die = Record.new({'record_name' => 'Born To Die',
+                          'artist_id' => lana_del_rey.id,
+                          'genre' => 'Pop',
+                          'stock' => 10,
+                          'buying_cost' => 8,
+                          'selling_price' => 15})
+born_to_die.save()
 
 binding.pry
 nil
