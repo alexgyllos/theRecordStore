@@ -18,11 +18,26 @@ get '/labels/:id/edit' do
   erb(:"labels/edit")
 end
 
+# NEW
+
+get '/labels/new' do
+  @labels = Label.all()
+  erb(:"labels/new")
+end
+
 # SHOW
 
 get '/labels/:id' do
   @label = Label.find(params['id'].to_i)
   erb(:"labels/show")
+end
+
+# CREATE
+
+post '/labels' do
+  new_label = Label.new(params)
+  new_label.save()
+  redirect('/labels')
 end
 
 # DELETE

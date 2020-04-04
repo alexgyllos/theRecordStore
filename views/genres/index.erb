@@ -8,6 +8,26 @@
   <% end %>
 </ul>
 
+<h1>Pop</h1>
+
+<ul>
+  <% @records.each do |record| %>
+  <% if record.genre == 'Pop' %>
+  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li>
+  <% end %>
+  <% end %>
+</ul>
+
+<h1>Country</h1>
+
+<ul>
+  <% @records.each do |record| %>
+  <% if record.genre == 'Country' %>
+  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li>
+  <% end %>
+  <% end %>
+</ul>
+
 <h1>Jazz</h1>
 
 <ul>

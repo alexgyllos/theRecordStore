@@ -18,6 +18,13 @@ get '/artists/:id/edit' do
   erb(:"artists/edit")
 end
 
+# NEW
+
+get '/artists/new' do
+  @artists = Artist.all()
+  erb(:"artists/new")
+end
+
 # SHOW
 
 get '/artists/:id' do
@@ -25,12 +32,24 @@ get '/artists/:id' do
   erb( :"artists/show")
 end
 
+# CREATE
+
+post '/artists' do
+  new_artist = Artist.new(params)
+  new_artist.save()
+  redirect('/artists')
+end
+
+# DELETE
+
 post '/artists/:id/delete' do
   id = params['id'].to_i
   artist = Artist.find(id)
   artist.delete()
   redirect('/')
 end
+
+# POST EDIT
 
 post '/artists/:id' do
   updated_artist = Artist.new(params)
