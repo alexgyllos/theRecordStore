@@ -1,0 +1,10 @@
+<form class="" action="/labels/<%= @label.id %>" method="post">
+
+  <label for="label">Label Name</label>
+    <input type="text" name="name" value="<%= @label.name %>"/>
+
+  <label for="label">Contact</label>
+  <input type="text" name="contact" value="<%= @label.contact %>"/>
+
+  <input type="submit" value="Edit">
+</form>
