@@ -53,6 +53,16 @@ class Record
     return markup
   end
 
+  def check_stock()
+    if @stock >= 6
+      return @stock
+    elsif @stock <= 5 && @stock > 0
+      return "#{@stock} - Low Stock"
+    elsif @stock == 0
+      return "#{@stock} - Out of Stock"
+    end
+  end
+
   def Record.find(id)
     sql = "SELECT * FROM records WHERE id = $1"
     values = [id]
