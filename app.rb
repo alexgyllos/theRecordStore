@@ -28,12 +28,27 @@ get '/records/:id/edit' do
   erb(:"records/edit")
 end
 
+# NEW
+
+get '/records/new' do
+  @records = Record.all()
+  erb(:"records/new")
+end
+
 # SHOW
 
 get '/records/:id' do
   @records = Record.find(params['id'].to_i)
   @artist = Artist.all()
   erb( :"records/show" )
+end
+
+# CREATE
+
+post '/records' do
+  new_record = Record.new(params)
+  new_record.save()
+  redirect('/')
 end
 
 # DELETE
