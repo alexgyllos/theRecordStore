@@ -1,5 +1,10 @@
 <h1><%= @label.name %></h1>
-<p> Contact: <%= @label.contact %></p>
+
+
+<div class="new-record">
+  <p> Contact: <%= @label.contact %></p>
+</div>
+
 
 <ul>
   <% @label.artists().each do |artist| %>
@@ -7,8 +12,10 @@
   <% end %>
 </ul>
 
-<a href="/labels/<%= @label.id %>/edit">Edit Label</a>
-<br>
-<form action="/labels/<%= @label.id %>/delete" method="post">
-  <button type="submit" name="button">Delete Label</button>
-</form>
+<div class="new-record">
+  <a href="/labels/<%= @label.id %>/edit">Edit Label</a>
+  <br>
+  <form action="/labels/<%= @label.id %>/delete" method="post"><br>
+    <button type="submit" name="button">Delete Label</button>
+  </form>
+</div>

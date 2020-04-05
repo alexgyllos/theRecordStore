@@ -1,6 +1,9 @@
 <h1><%= @records.record_name %></h1>
 <h2><%= @records.artists().name %></h2>
 
+<div class="new-record">
+
+
 <p> Genre: <%= @records.genre %></p>
 <p> Stock: <%= @records.check_stock %> </p>
 <p> Buying Cost: <%= @records.buying_cost %></p>
@@ -9,6 +12,7 @@
 
 <a href="/records/<%= @records.id %>/edit">Edit Record</a>
 <br>
-<form action="/records/<%= @records.id %>/delete" method="post">
+<form action="/records/<%= @records.id %>/delete" method="post"><br>
   <button type="submit" name="button">Delete Record</button>
 </form>
+</div>

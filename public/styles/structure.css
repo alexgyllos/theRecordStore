@@ -1,38 +1,89 @@
-body {
-  background: #FFFCC0;
-  background-size: 100%;
-}
-
-nav ul li {
-  color: black;
-  font-family: 'Impact', impact, sans-serif;
-  text-decoration: none;
-  list-style-type: none;
-  display: inline;
-}
-
-#content ul li {
-  color: black;
-  font-family: 'Impact', impact, sans-serif;
-  text-decoration: none;
-  list-style-type: none;
-  display: inline;
-}
-
-/* .navigation li {
-  align-items: flex-end;
-} */
-
 a {
   color: black;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  background-color: #FFFCC0;
+}
+
+h1 {
   font-family: 'Impact', impact, sans-serif;
+  font-size: 1.7em;
+  padding-left: 3%;
+}
+
+h2 {
+  font-family: 'Impact', impact, sans-serif;
+  font-size: 1.7em;
+  padding-left: 3%;
+}
+
+li a {
   text-decoration: none;
 }
 
-.flex {
-  display: flex;
+ul li {
+  list-style-type: none;
+  display: inline-flex;
+  justify-content: space-between;
 }
 
-.flex--row {
+img.vinyl {
+  width: 200px;
+  height: 200px;
+  margin-top: 5%;
+}
+
+.new-record {
+  margin-left: 3%;
+  margin-top: 2%;
+}
+
+.records {
+  font-family: 'Impact', impact, sans-serif;
+  font-size: 1.1em;
+}
+
+.artists {
+  font-family: 'Impact', impact, sans-serif;
+  font-size: 1.0em;
+}
+
+#container {
+
+}
+
+#content {
+
+}
+
+#footer {
+  clear: both;
+  padding-left: 3%;
+  padding-top: 3%;
+}
+
+#header {
+  font-family: 'Impact', impact, sans-serif;
+  font-size: 1.7em;
+  padding-left: 3%;
+}
+
+#records {
+  display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+#main {
+
+}
+
+#nav {
+
 }

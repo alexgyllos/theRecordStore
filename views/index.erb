@@ -1,8 +1,15 @@
-<ul>
+  <div id="records">
   <% @records.each do |record| %>
-  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li><br>
-  <li><a href="/artists/<%= record.artist_id%>"><%= record.artists().name %></a></li><br>
+    <div>
+      <a href="/records/<%= record.id %>" class="records">
+      <img class="vinyl" src="/images/vinyl.png" alt=""></a><br>
+      <a href="/records/<%= record.id %>" class="records"><%= record.record_name %></a>
+      <br>
+      <a href="/artists/<%= record.artist_id%>" class="artists"><%= record.artists().name %></a>
+      <br>
+    </div>
   <% end %>
-</ul>
-
-<a href="/records/new">New Record</a>
+  </div>
+  <div class="new-record">
+    <a href="/records/new">New Record</a>
+  </div>
