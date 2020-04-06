@@ -10,6 +10,10 @@
 </div>
 
 <div class="new-record">
+  <%= @label.activity() %>
+</div>
+
+<div class="new-record">
   <a href="/labels/<%= @label.id %>/edit">Edit Label</a>
   <br>
   <form action="/labels/<%= @label.id %>/delete" method="post"><br>

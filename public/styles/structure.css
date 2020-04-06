@@ -6,6 +6,10 @@ a {
   font-size: 1em;
 }
 
+a:hover {
+  color: #5F5D5D;
+}
+
 html, body {
   background-color: #FFFCC0;
   height: 100%;
