@@ -1,9 +1,16 @@
-<ul>
+<div id="records">
+
+
   <% @labels.each do |label| %>
-  <li><a href="/labels/<%= label.id %>"><%= label.name %></a></li>
+  <div>
+    <a href="/labels/<%= label.id %>" class="records">
+    <img class="vinyl" src="/images/label.png" alt=""></a><br>
+    <a href="/labels/<%= label.id %>"><%= label.name %></a>
+  </div>
+
   <% end %>
-</ul>
+</div>
 
 <div class="new-record">
-  <a href="/labels/new">New Label</a>
+    <a href="/labels/new">New Label</a>
 </div>

@@ -1,12 +1,13 @@
-<ul>
+<div id="records">
   <% @artists.each do |artist| %>
-  <li><a href="/artists/<%= artist.id %>"><%= artist.name %></a></li>
+  <div>
+    <a href="/artists/<%= artist.id %>" class="records">
+    <img class="vinyl" src="/images/artist.png" alt=""></a><br>
+    <a href="/artists/<%= artist.id %>"><%= artist.name %></a><br>
+    </div>
   <% end %>
-</ul>
+</div>
 
 <div class="new-record">
-
-
-<a href="/artists/new">New Artist</a>
-
+  <a href="/artists/new">New Artist</a>
 </div>

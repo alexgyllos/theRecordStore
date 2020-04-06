@@ -75,9 +75,9 @@ img.vinyl {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding-left: 2%;
-  padding-right: 2%;
+  justify-content: space-between;
+  padding-left: 3%;
+  padding-right: 3%;
 }
 
 #main {
