@@ -1,16 +1,19 @@
 input[type="text"] {
   text-transform: capitalize;
+  border: 1px solid black;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  padding-right: 90%;
+  margin-right: 85%;
+
 }
 
 input[type="submit"] {
   display: flex;
-  padding: 3%;
-  margin-right: 45%;
+  margin-right: 55%;
   margin-top: 3%;
+  justify-content: center;
+  border: 1px solid black;
 }

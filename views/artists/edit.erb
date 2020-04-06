@@ -1,10 +1,14 @@
-<form class="" action="/artists/<%= @artist.id %>" method="post">
+<div class="new-record">
 
-  <label for="artist">Artist Name</label>
-    <input type="text" name="name" value="<%= @artist.name %>"/>
+  <form class="form" action="/artists/<%= @artist.id %>" method="post">
 
-  <label for="label">Label</label>
-    <input type="text" name="label_id" value="<%= @artist.label_id %>"/>
+    <label for="artist">Artist Name</label>
+      <input type="text" name="name" value="<%= @artist.name %>"/>
+      <br>
+    <label for="label">Label</label>
+      <input type="text" name="label_id" value="<%= @artist.label_id %>"/>
+      <br>
+    <input type="submit" value="Edit">
+  </form>
 
-  <input type="submit" value="Edit">
-</form>
+</div>
