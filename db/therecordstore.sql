@@ -5,13 +5,15 @@ DROP TABLE labels;
 CREATE TABLE labels (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  contact VARCHAR(255)
+  contact VARCHAR(255),
+  active BOOLEAN
 );
 
 CREATE TABLE artists (
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  label_id INT REFERENCES labels(id) ON DELETE CASCADE
+  label_id INT REFERENCES labels(id) ON DELETE CASCADE,
+  active BOOLEAN
 );
 
 CREATE TABLE records (

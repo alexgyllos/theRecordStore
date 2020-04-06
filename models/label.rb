@@ -4,26 +4,27 @@ require_relative('./artist')
 class Label
 
   attr_reader :id
-  attr_accessor :name, :contact
+  attr_accessor :name, :contact, :active
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @contact = options['contact']
+    @active = options['active']
   end
 
   def save()
-    sql = "INSERT INTO labels (name, contact)
-           VALUES ($1, $2)
+    sql = "INSERT INTO labels (name, contact, active)
+           VALUES ($1, $2, $3)
            RETURNING id"
-    values = [@name, @contact]
+    values = [@name, @contact, @active]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
 
   def update()
-    sql = "UPDATE labels SET (name, contact) = ($1, $2) WHERE id = $3"
-    values = [@name, @contact, @id]
+    sql = "UPDATE labels SET (name, contact, active) = ($1, $2, $3) WHERE id = $4"
+    values = [@name, @contact, @active, @id]
     SqlRunner.run(sql, values)
   end
 

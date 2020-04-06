@@ -8,43 +8,53 @@ Artist.delete_all()
 Label.delete_all()
 
 captured_tracks = Label.new({'name' => 'Captured Tracks',
-                             'contact' => 'capturedtracks@email.com'})
+                             'contact' => 'capturedtracks@email.com',
+                             'active' => true})
 captured_tracks.save()
 
 capitol_records = Label.new({'name' => 'Capitol Records',
-                             'contact' => 'capitolrecords@email.com'})
+                             'contact' => 'capitolrecords@email.com',
+                             'active' => true})
 capitol_records.save()
 
 prestige_records = Label.new({'name' => 'Prestige Records',
-                              'contact' => 'prestigerecords@email.com'})
+                              'contact' => 'prestigerecords@email.com',
+                              'active' => true})
 prestige_records.save()
 
 reprise_records = Label.new({'name' => 'Reprise Records',
-                             'contact' => 'repriserecords@email.com'})
+                             'contact' => 'repriserecords@email.com',
+                             'active' => true})
 reprise_records.save()
 
 polydor_records = Label.new({'name' => 'Polydor Reocords',
-                             'contact' => 'polydorrecords@email.com'})
+                             'contact' => 'polydorrecords@email.com',
+                             'active' => true})
 polydor_records.save()
 
 mac_demarco = Artist.new({'name' => 'Mac DeMarco',
-                          'label_id' => captured_tracks.id})
+                          'label_id' => captured_tracks.id,
+                          'active' => true})
 mac_demarco.save()
 
 the_beach_boys = Artist.new({'name' => 'The Beach Boys',
-                             'label_id' => capitol_records.id})
+                             'label_id' => capitol_records.id,
+                             'active' => true})
 the_beach_boys.save()
 
 miles_davis = Artist.new({'name' => 'Miles Davis',
-                          'label_id' => prestige_records.id})
+                          'label_id' => prestige_records.id,
+                          'active' => true})
 miles_davis.save()
 
 neil_young = Artist.new({'name' => 'Neil Young',
-                         'label_id' => reprise_records.id})
+                         'label_id' => reprise_records.id,
+                         'active' => true})
 neil_young.save()
 
 lana_del_rey = Artist.new({'name' => 'Lana Del Rey',
-                           'label_id' => polydor_records.id})
+                           'label_id' => polydor_records.id,
+                           'active' => true})
 lana_del_rey.save()
 
 this_old_dog = Record.new({'record_name' => 'This Old Dog',
