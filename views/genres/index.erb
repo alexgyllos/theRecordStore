@@ -1,39 +1,45 @@
+<br>
 <h1>Rock</h1>
 
-<ul>
+<div class="new-record">
   <% @records.each do |record| %>
-  <% if record.genre == 'Rock' %>
-  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li>
+    <% if record.genre == 'Rock' %>
+      <a href="/records/<%= record.id %>"><%= record.record_name %></a>
+      <% end %>
   <% end %>
-  <% end %>
-</ul>
+</div>
 
+<br>
 <h1>Pop</h1>
 
-<ul>
-  <% @records.each do |record| %>
-  <% if record.genre == 'Pop' %>
-  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li>
-  <% end %>
-  <% end %>
-</ul>
+<div class="new-record">
 
+
+  <% @records.each do |record| %>
+    <% if record.genre == 'Pop' %>
+        <a href="/records/<%= record.id %>"><%= record.record_name %></a>
+    <% end %>
+  <% end %>
+</div>
+
+<br>
 <h1>Country</h1>
 
-<ul>
+<div class="new-record">
   <% @records.each do |record| %>
-  <% if record.genre == 'Country' %>
-  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li>
+    <% if record.genre == 'Country' %>
+      <a href="/records/<%= record.id %>"><%= record.record_name %></a>
+    <% end %>
   <% end %>
-  <% end %>
-</ul>
+</div>
 
+<br>
 <h1>Jazz</h1>
 
-<ul>
+<div class="new-record">
   <% @records.each do |record| %>
-  <% if record.genre == 'Jazz' %>
-  <li><a href="/records/<%= record.id %>"><%= record.record_name %></a></li>
+    <% if record.genre == 'Jazz' %>
+      <a href="/records/<%= record.id %>"><%= record.record_name %></a>
+    <% end %>
   <% end %>
-  <% end %>
-</ul>
+</div>
