@@ -6,7 +6,13 @@
       <input type="text" name="name" value="<%= @artist.name %>"/>
       <br>
     <label for="label">Label</label>
-      <input type="text" name="label_id" value="<%= @artist.label_id %>"/>
+      <select id="label" name="label_id">
+        <% @labels.each do |label| %>
+        <option value="<%= label.id %>" <%= "selected" if @artist.label_id == label.id %>>
+          <%= label.name %>
+        </option>
+        <% end %>
+      </select>
       <br>
       <label for="active">Activate/De-Activate</label>
       <input type="radio" name="active" value="<%= @artist.active == "f"%>">

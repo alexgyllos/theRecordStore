@@ -17,6 +17,7 @@ end
 
 get '/records/new' do
   @records = Record.all
+  @artists = Artist.all
   erb(:"records/new")
 end
 
@@ -25,6 +26,7 @@ end
 get '/records/:id/edit' do
   id = params['id'].to_i
   @record = Record.find(id)
+  @artists = Artist.all()
   erb(:"records/edit")
 end
 

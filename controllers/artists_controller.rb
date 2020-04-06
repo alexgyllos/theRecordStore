@@ -15,6 +15,7 @@ end
 get '/artists/:id/edit' do
   id = params['id'].to_i
   @artist = Artist.find(id)
+  @labels = Label.all()
   erb(:"artists/edit")
 end
 
@@ -22,6 +23,7 @@ end
 
 get '/artists/new' do
   @artists = Artist.all()
+  @labels = Label.all()
   erb(:"artists/new")
 end
 

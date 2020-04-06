@@ -5,11 +5,25 @@
     <label for="student">Record Name</label>
       <input type="text" name="record_name" value="<%= @record.record_name %>"/>
       <br>
-    <label for="record">Artist ID</label>
-      <input type="text" name="artist_id" value="<%= @record.artist_id %>"/>
+
+    <label for="artist">Artist</label>
+      <select id="artist" name="artist_id">
+        <% @artists.each do |artist| %>
+        <option value="<%= artist.id %>" <%= "selected" if @record.artist_id == artist.id %>>
+          <%= artist.name %>
+        </option>
+        <% end %>
+      </select>
+
       <br>
-    <label for="record">Genre</label>
-      <input type="text" name="genre" value="<%= @record.genre %>"/>
+
+    <label for="genre">Genre</label>
+      <select id="genre" name="genre">
+        <option value="Rock">Rock</option>
+        <option value="Pop">Pop</option>
+        <option value="Country">Country</option>
+        <option value="Jazz">Jazz</option>
+      </select>
       <br>
     <label for="record">Stock</label>
       <input type="text" name="stock" value="<%= @record.stock%>"/>
