@@ -2,17 +2,21 @@
 
 <div class="new-record">
   <% @artist.records().each do |record| %>
-    <a href="/records/<%= record.id %>"><%= record.record_name %></a> 
+    <a href="/records/<%= record.id %>"><%= record.record_name %></a>
   <% end %>
 </div>
 
 <div class="new-record">
+  <%= @artist.activity() %>
+</div>
 
-<a href="/artists/<%= @artist.id %>/edit">Edit Artist</a>
+<div class="new-record">
 
-<form action="/artists/<%= @artist.id %>/delete" method="post">
-  <br>
-<button type="submit" name="button">Delete Artist</button>
-</form>
+  <a href="/artists/<%= @artist.id %>/edit">Edit Artist</a>
+
+  <form action="/artists/<%= @artist.id %>/delete" method="post">
+    <br>
+    <button type="submit" name="button">Delete Artist</button>
+  </form>
 
 </div>

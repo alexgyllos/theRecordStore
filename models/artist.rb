@@ -53,6 +53,14 @@ class Artist
     return records.map {|record| Record.new(record)}
   end
 
+  def activity()
+    if @active == "t"
+      return 'Active'
+    else
+      return 'De-Activated'
+    end
+  end
+
   def Artist.all()
     sql = "SELECT * FROM artists"
     results = SqlRunner.run(sql)
