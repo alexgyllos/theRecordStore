@@ -1,22 +1,27 @@
-<form class="" action="/records" method="post">
+<div class="new-record">
 
-<label for="record">Record Name</label>
-  <input type="text" name="record_name">
+  <form class="form" action="/records" method="post">
 
-<label for="record">Artist ID</label>
-  <input type="text" name="artist_id" value="">
+  <label for="record">Record Name</label>
+    <input type="text" name="record_name">
+  <br>
+  <label for="record">Artist ID</label>
+    <input type="text" name="artist_id" value="">
+  <br>
+  <label for="record">Genre</label>
+    <input type="text" name="genre" value="">
+  <br>
+  <label for="record">Stock</label>
+    <input type="text" name="stock" value="">
+  <br>
+  <label for="record">Buying Cost</label>
+    <input type="text" name="buying_cost" value="">
+  <br>
+  <label for="record">Selling Price</label>
+    <input type="text" name="selling_price" value="">
+    <br>
 
-<label for="record">Genre</label>
-  <input type="text" name="genre" value="">
+  <input type="submit" value="Add Record">
+  </form>
 
-<label for="record">Stock</label>
-  <input type="text" name="stock" value="">
-
-<label for="record">Buying Cost</label>
-  <input type="text" name="buying_cost" value="">
-
-<label for="record">Selling Price</label>
-  <input type="text" name="selling_price" value="">
-
-<input type="submit" value="Add Record">
-</form>
+</div>
