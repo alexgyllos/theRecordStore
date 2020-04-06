@@ -71,13 +71,13 @@ pet_sounds = Record.new({'record_name' => 'Pet Sounds',
                          'selling_price' => 15})
 pet_sounds.save()
 
-relaxin_with_the_miles_davis_quintet = Record.new({'record_name' => "Relaxin' with the Miles Davis Quintet",
+kind_of_blue = Record.new({'record_name' => "Kind of Blue",
                                                    'artist_id' => miles_davis.id,
                                                    'genre' => 'Jazz',
                                                    'stock' => 5,
                                                    'buying_cost' => 4,
                                                    'selling_price' => 13})
-relaxin_with_the_miles_davis_quintet.save()
+kind_of_blue.save()
 
 harvest = Record.new({'record_name' => 'Harvest',
                       'artist_id' => neil_young.id,

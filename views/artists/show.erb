@@ -1,10 +1,8 @@
 <h1 style="text-transform: capitalize;"><%= @artist.name %></h1>
 
 <div class="new-record">
-
-
   <% @artist.records().each do |record| %>
-    <a href="/records/<%= record.id %>"><%= record.record_name %></a>
+    <a href="/records/<%= record.id %>"><%= record.record_name %></a> 
   <% end %>
 </div>
 
