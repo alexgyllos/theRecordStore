@@ -6,11 +6,13 @@
     <input type="text" name="name" value="">
     <br>
   <label for="label">Label</label>
-    <select id="label" name="label_id">
+    <select class="custom-select" id="label" name="label_id">
       <% @labels.each do |label| %>
+      <% if label.activity == 'Active' %>
       <option value="<%= label.id %>">
         <%= label.name %>
       </option>
+      <% end %>
       <% end %>
     </select>
   <br>

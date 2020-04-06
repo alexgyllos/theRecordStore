@@ -10,6 +10,21 @@ a:hover {
   color: #5F5D5D;
 }
 
+.button {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font-family: 'Impact', sans-serif;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  color: #5F5D5D;
+}
+
 html, body {
   background-color: #FFFCC0;
   height: 100%;

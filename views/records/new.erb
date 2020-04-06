@@ -8,9 +8,11 @@
   <label for="artist">Artist</label>
     <select id="artist" name="artist_id">
       <% @artists.each do |artist| %>
+      <% if artist.activity == 'Active' %>
       <option value="<%= artist.id %>">
         <%= artist.name %>
       </option>
+      <% end %>
       <% end %>
     </select>
   <br>

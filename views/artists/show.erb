@@ -7,7 +7,7 @@
 </div>
 
 <div class="new-record">
-  <%= @artist.activity() %>
+  <p><%= @artist.activity() %></p>
 </div>
 
 <div class="new-record">
@@ -16,7 +16,7 @@
 
   <form action="/artists/<%= @artist.id %>/delete" method="post">
     <br>
-    <button type="submit" name="button">Delete Artist</button>
+    <button class="button" type="submit" name="button">Delete Artist</button>
   </form>
 
 </div>
