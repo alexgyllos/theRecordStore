@@ -8,6 +8,9 @@
     <label for="label">Label</label>
       <input type="text" name="label_id" value="<%= @artist.label_id %>"/>
       <br>
+      <label for="active">Activate/De-Activate</label>
+      <input type="radio" name="active" value="<%= @artist.active == "f"%>">
+      <br>
     <input type="submit" value="Edit">
   </form>
 

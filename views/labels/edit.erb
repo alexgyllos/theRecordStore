@@ -8,6 +8,10 @@
     <label for="label">Contact</label>
     <input type="text" style="text-transform: lowercase; margin-right: 0%;"name="contact" value="<%= @label.contact %>"/>
       <br>
+
+    <label for="active">Activate/De-Activate</label>
+    <input type="radio" name="active" value="<%= @label.active == "f"%>">
+    <br>
     <input type="submit" value="Edit">
   </form>
 
