@@ -1,9 +1,11 @@
 <div id="records">
   <% @artists.each do |artist| %>
-  <div>
-    <a href="/artists/<%= artist.id %>" class="records">
-    <img class="vinyl" src="/images/artist.png" alt=""></a><br>
-    <a style="text-transform: capitalize;" href="/artists/<%= artist.id %>"><%= artist.name %></a><br>
+    <div>
+      <a href="/artists/<%= artist.id %>" class="records">
+      <img class="vinyl" src="/images/artist.png" alt="">
+      </a>
+        <br>
+      <a style="text-transform: capitalize;" href="/artists/<%= artist.id %>"><%= artist.name %></a><br>
     </div>
   <% end %>
 </div>

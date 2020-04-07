@@ -14,7 +14,6 @@ class Record
     @stock = options['stock'].to_i
     @buying_cost = options['buying_cost'].to_i
     @selling_price = options['selling_price'].to_i
-    # @markup = options['markup'].to_i
   end
 
   def save()

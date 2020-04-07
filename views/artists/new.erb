@@ -1,22 +1,22 @@
 <div class="new-record">
 
-<form class="form" action="/artists" method="post">
+  <form class="form" action="/artists" method="post">
 
-  <label for="artist">Artist Name</label>
-    <input type="text" name="name" value="">
+    <label for="artist">Artist Name</label>
+      <input type="text" name="name" value="">
+      <br>
+    <label for="label">Label</label>
+      <select class="custom-select" id="label" name="label_id">
+        <% @labels.each do |label| %>
+        <% if label.activity == 'Active' %>
+        <option value="<%= label.id %>">
+          <%= label.name %>
+        </option>
+        <% end %>
+        <% end %>
+      </select>
     <br>
-  <label for="label">Label</label>
-    <select class="custom-select" id="label" name="label_id">
-      <% @labels.each do |label| %>
-      <% if label.activity == 'Active' %>
-      <option value="<%= label.id %>">
-        <%= label.name %>
-      </option>
-      <% end %>
-      <% end %>
-    </select>
-  <br>
-  <input type="submit" name="" value="Add Artist">
-</form>
+    <input type="submit" name="" value="Add Artist">
+  </form>
 
 </div>
