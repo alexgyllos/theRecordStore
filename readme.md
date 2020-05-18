@@ -1,3 +1,5 @@
+<img style="width: 300px;" src="https://github.com/alexgyllos/files/blob/master/therecordstorepreview.png" alt="recipes home page">
+
 theRecord Store
 This is an online record store built using the sinatra framework for ruby. The project demonstrates the use of databases, classes, html & css.
 

@@ -47,6 +47,10 @@ class Record
     return results.map {|artist| Artist.new(artist)}.first()
   end
 
+  # GIVEN I have a selling_price variable that is equal to 15 and a buying_cost variable that is equal to 5
+  # WHEN I run the calculate_markup method on an record object
+  # THEN I will receive a markup of 10
+
   def calculate_markup()
     markup = @selling_price - @buying_cost
     return markup
